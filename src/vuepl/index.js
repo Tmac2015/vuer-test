@@ -1,8 +1,8 @@
- 
+const stores = require('vuex');
 var a = {
+ 
     install:function(vue) {
         // 混入vue实例
-        console.log(vue)
         vue.mixin({
           
             beforeCreate:function() {
@@ -19,9 +19,9 @@ var a = {
                     // import(/*chunkName:asada*/)  魔法注释
                     import("../store/module/"+name).then((res)=> {
                         // 动态注册vuex
-                         
-                   
-                        this.$store.registerModule(name, res.default)
+                      
+                        stores.Store.prototype.registerModule(name, res.default)
+
                     })
                   
                 }
