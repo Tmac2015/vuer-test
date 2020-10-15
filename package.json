@@ -1,21 +1,26 @@
 {
-  "name": "y",
+  "name": "route",
   "version": "1.0.0",
-  "description": "y",
+  "description": "动态加路由",
   "author": "tmac",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress  --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
+    "dll": "webpack --config build/webpack.dll.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "happypack": "^5.0.1",
+    "os": "^0.1.1",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.5.1",
+    "webpack": "^3.12.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

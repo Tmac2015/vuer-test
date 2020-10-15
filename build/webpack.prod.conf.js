@@ -30,9 +30,14 @@ const webpackConfig = merge(baseWebpackConfig, {
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
+   
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
+    }),
+    new webpack.DllReferencePlugin({
+        context:path.join(__dirname,".."),
+        manifest:require("./vendor-manifest.json")
     }),
     new UglifyJsPlugin({
       uglifyOptions: {
