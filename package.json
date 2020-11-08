@@ -15,10 +15,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "-": "0.0.1",
+    "axios": "^0.21.0",
     "happypack": "^5.0.1",
+    "loadsh": "0.0.4",
     "os": "^0.1.1",
+    "save": "^2.4.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
+    "vue-router": "^3.4.9",
     "vuex": "^3.5.1",
     "webpack": "^3.12.0"
   },
@@ -75,7 +79,7 @@
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
-    "webpack": "^3.6.0",
+    "webpack": "^3.0.2",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
@@ -88,5 +92,19 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tmac2015/vuer-test.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tmac2015/vuer-test/issues"
+  },
+  "homepage": "https://github.com/Tmac2015/vuer-test#readme"
 }
