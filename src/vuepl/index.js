@@ -18,7 +18,7 @@ var a = {
                     // import(/*chunkName:asada*/)  魔法注释
                     import("../store/module/"+name).then((res)=> {
                         // 动态注册vuex
-                        const stores = require('vuex');
+                        // const stores = require('vuex');
                         
                         // stores.Store.prototype.registerModule(name, res.default)
 
@@ -35,12 +35,17 @@ var a = {
                     function getsec(time) {
                         return Math.floor(time/1024)+'s';
                     }
-                    console.log("可用内存"+getmb(_perss.memory.jsHeapSizeLimit));
-                    console.log("内存占用"+getmb(_perss.memory.usedJSHeapSize));
-                    console.log("tcp链接时间"+getsec(_perss.timing.connectEnd - _perss.timing.connectStart));
-                    console.log("响应时间"+getsec(_perss.timing.responseEnd - _perss.timing.responseStart));
+                   
+                    
                     window.onload=function() {
-                        console.log("dom渲染耗时"+getsec(_perss.timing.domComplete - _perss.timing.domLoading));
+                        console.table({
+                            "可用内存":getmb(_perss.memory.jsHeapSizeLimit),
+                            "内存占用":getmb(_perss.memory.usedJSHeapSize),
+                            "tcp链接时间":getsec(_perss.timing.connectEnd - _perss.timing.connectStart),
+                            "响应时间":getsec(_perss.timing.responseEnd - _perss.timing.responseStart),
+                            "dom渲染耗时":getsec(_perss.timing.domComplete - _perss.timing.domLoading)
+                        });
+                     
                     }
   
   

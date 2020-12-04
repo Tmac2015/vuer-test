@@ -6,13 +6,13 @@ import router from './router'
  
  
 // import ElementUI from 'element-ui';
-import { Button, Select } from 'element-ui';
+// import { Button, Select } from 'element-ui';
 
 // import 'element-ui/lib/theme-chalk/index.css';
 import vuepl from './vuepl'
 // Vue.use(ElementUI);
-Vue.component(Button.name, Button);
-Vue.component(Select.name, Select);
+// Vue.component(Button.name, Button);
+// Vue.component(Select.name, Select);
 // 执行vuepl 
 Vue.use(vuepl);
 

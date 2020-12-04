@@ -1,25 +1,13 @@
 <template>
   <div class="hello">
-      <h1>modle1 secord</h1>
+      <h1>404</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  path:'model1/pages/',
-  mounted() {
-      console.log("子组件mounted")
-  },
-   beforeCreate() {
-     console.log("子组件beforeCreate")
-  },
-   created() {
-     console.log("子组件created")
-  },
-  beforeMount() {
-      console.log("子组件beforeMount")
-  },
+  name: '404', 
+   path:'model1/pages/',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

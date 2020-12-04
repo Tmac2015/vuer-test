@@ -2,6 +2,7 @@
   <div class="hello">
       <h1>modle1 index</h1>
       <BaseButton></BaseButton>
+   
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 import BaseButton from './model1.secord.vue'
 export default {
   name: 'model1index',
+  path:'model1/pages/',
   isVuex:true,
   components:{
     BaseButton
