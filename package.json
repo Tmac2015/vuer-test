@@ -16,17 +16,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "element-ui": "^2.13.2",
-    "express": "^4.17.1",
-    "happypack": "^5.0.1",
-    "node": "^15.3.0",
-=======
     "-": "0.0.1",
     "axios": "^0.21.0",
     "happypack": "^5.0.1",
     "loadsh": "0.0.4",
->>>>>>> c15fc0922253ca4b641779fdd707cfba51a42ce0
     "os": "^0.1.1",
     "save": "^2.4.0",
     "vue": "^2.5.2",

@@ -25,6 +25,28 @@ var a = {
                     })
                   
                 }
+            },
+            mounted:function() {
+                     
+                    let _perss = window.performance;
+                    function getmb(size) {
+                        return Math.floor(size/1024/1024,4)+'MB';
+                    }
+                    function getsec(time) {
+                        return Math.floor(time/1024)+'s';
+                    }
+                    console.log("可用内存"+getmb(_perss.memory.jsHeapSizeLimit));
+                    console.log("内存占用"+getmb(_perss.memory.usedJSHeapSize));
+                    console.log("tcp链接时间"+getsec(_perss.timing.connectEnd - _perss.timing.connectStart));
+                    console.log("响应时间"+getsec(_perss.timing.responseEnd - _perss.timing.responseStart));
+                    window.onload=function() {
+                        console.log("dom渲染耗时"+getsec(_perss.timing.domComplete - _perss.timing.domLoading));
+                    }
+  
+  
+            },
+            beforeDestroy:function() {
+                _perss = undefined
             }
         })
     }
