@@ -22,4 +22,7 @@ npm run dll
 
 动态注册vuex(done)  vuepl文件
 
-happypack - 多线程打包（doing）
+happypack - 多线程打包（done）
+
+node mock (todo)
+

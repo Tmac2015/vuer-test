@@ -3,11 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'axios'
-import loadsh from 'loadsh'
  
-import vuepl from './vuepl'
+ 
+// import ElementUI from 'element-ui';
+import { Button, Select } from 'element-ui';
 
+// import 'element-ui/lib/theme-chalk/index.css';
+import vuepl from './vuepl'
+// Vue.use(ElementUI);
+Vue.component(Button.name, Button);
+Vue.component(Select.name, Select);
 // 执行vuepl 
 Vue.use(vuepl);
 

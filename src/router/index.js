@@ -9,7 +9,9 @@ r.keys().forEach((item) => {
   arr = arr.concat(r(item).default);
 })
 export default new Router({
+  mode:"history",
   routes: [
+
     // {
     //   path: '/',
     //   name: 'HelloWorld',

@@ -1,4 +1,3 @@
-const stores = require('vuex');
 var a = {
  
     install:function(vue) {
@@ -19,8 +18,9 @@ var a = {
                     // import(/*chunkName:asada*/)  魔法注释
                     import("../store/module/"+name).then((res)=> {
                         // 动态注册vuex
-                      
-                        stores.Store.prototype.registerModule(name, res.default)
+                        const stores = require('vuex');
+                        
+                        // stores.Store.prototype.registerModule(name, res.default)
 
                     })
                   

@@ -7,6 +7,18 @@
 <script>
 export default {
   name: 'HelloWorld',
+  mounted() {
+      console.log("子组件mounted")
+  },
+   beforeCreate() {
+     console.log("子组件beforeCreate")
+  },
+   created() {
+     console.log("子组件created")
+  },
+  beforeMount() {
+      console.log("子组件beforeMount")
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
