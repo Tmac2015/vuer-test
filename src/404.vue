@@ -1,12 +1,12 @@
 <template>
   <div class="hello">
-      <h1>modle1 third</h1>
+      <h1>404</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld', 
+  name: '404', 
    path:'model1/pages/',
   data () {
     return {

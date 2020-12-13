@@ -35,6 +35,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
+    // dll优化
     new webpack.DllReferencePlugin({
         context:path.join(__dirname,".."),
         manifest:require("./vendor-manifest.json")

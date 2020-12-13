@@ -1,4 +1,3 @@
-const stores = require('vuex');
 var a = {
  
     install:function(vue) {
@@ -19,12 +18,40 @@ var a = {
                     // import(/*chunkName:asada*/)  魔法注释
                     import("../store/module/"+name).then((res)=> {
                         // 动态注册vuex
-                      
-                        stores.Store.prototype.registerModule(name, res.default)
+                        // const stores = require('vuex');
+                        
+                        // stores.Store.prototype.registerModule(name, res.default)
 
                     })
                   
                 }
+            },
+            mounted:function() {
+                     
+                    let _perss = window.performance;
+                    function getmb(size) {
+                        return Math.floor(size/1024/1024,4)+'MB';
+                    }
+                    function getsec(time) {
+                        return Math.floor(time/1024)+'s';
+                    }
+                   
+                    
+                    window.onload=function() {
+                        console.table({
+                            "可用内存":getmb(_perss.memory.jsHeapSizeLimit),
+                            "内存占用":getmb(_perss.memory.usedJSHeapSize),
+                            "tcp链接时间":getsec(_perss.timing.connectEnd - _perss.timing.connectStart),
+                            "响应时间":getsec(_perss.timing.responseEnd - _perss.timing.responseStart),
+                            "dom渲染耗时":getsec(_perss.timing.domComplete - _perss.timing.domLoading)
+                        });
+                     
+                    }
+  
+  
+            },
+            beforeDestroy:function() {
+                _perss = undefined
             }
         })
     }
