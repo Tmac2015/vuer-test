@@ -8,7 +8,10 @@ var arr = [];
 r.keys().forEach((item) => {
   arr = arr.concat(r(item).default);
 })
+
+console.log(arr)
 export default new Router({
+  mode: 'history', // 后端支持可开
   routes: [
     // {
     //   path: '/',
@@ -18,3 +21,5 @@ export default new Router({
     ...arr
   ]
 })
+
+ 
